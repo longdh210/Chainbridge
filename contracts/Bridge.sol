@@ -3,6 +3,7 @@ pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "./Interfaces/IToken.sol";
+import "hardhat/console.sol";
 
 contract Bridge {
     address public admin;
@@ -23,11 +24,13 @@ contract Bridge {
         Step indexed step
     );
 
+    // Set admin to increase security (later update)
     constructor(address _token) {
         admin = msg.sender;
         token = IToken(_token);
     }
 
+    // Burn token when it transfer to new chain
     function burn(address to, uint256 amount) external {
         token.burn(msg.sender, amount);
         emit Transfer(
@@ -38,27 +41,31 @@ contract Bridge {
             nonce,
             Step.Burn
         );
+        nonce++;
     }
 
+    // Mint token when another chain send to
     function mint(
         address to,
         uint256 amount,
         uint256 destinationChainNonce
     ) external {
-        require(msg.sender == admin, "Only admin can call this function");
-        require(
-            processedNonces[destinationChainNonce] == false,
-            "Transfer already processed"
-        );
-        processedNonces[destinationChainNonce] = true;
-        token.mint(to, amount);
-        emit Transfer(
-            msg.sender,
-            to,
-            amount,
-            block.timestamp,
-            destinationChainNonce,
-            Step.Mint
-        );
+        if (processedNonces[destinationChainNonce] == false) {
+            processedNonces[destinationChainNonce] = true;
+            token.mint(to, amount);
+            emit Transfer(
+                msg.sender,
+                to,
+                amount,
+                block.timestamp,
+                destinationChainNonce,
+                Step.Mint
+            );
+        } else {
+            console.log(
+                "Transfer of this nonce already processed: ",
+                destinationChainNonce
+            );
+        }
     }
 }

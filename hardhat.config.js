@@ -21,6 +21,10 @@ module.exports = {
             url: "https://eth-rinkeby.alchemyapi.io/v2/kAPtSA_EMLRedffB6D1Ehre3rQQ2pmn2",
             accounts: [privateKey],
         },
+        goerli: {
+            url: "https://eth-goerli.alchemyapi.io/v2/sNcf8L4HbcXGz_93jNm2TvvhqZ0b6kRp",
+            accounts: [privateKey],
+        },
     },
     solidity: "0.8.4",
 };
