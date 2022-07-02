@@ -28,9 +28,7 @@ async function main() {
         to: sourceChainBridgeAddress,
         nonce: nonce,
         gas: 500000,
-        data: sourceChainBridge.methods
-            .burn("0x5B9aAEf5292B5D38C30Bb5B0CA65D3960E158b66", 1000)
-            .encodeABI(),
+        data: sourceChainBridge.methods.lock(senderPublicKey, 1000).encodeABI(),
     };
 
     const signPromise = web3.eth.accounts.signTransaction(tx, senderPrivateKey);

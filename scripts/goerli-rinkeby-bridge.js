@@ -41,7 +41,7 @@ bridgeGoerli.events
         const { from, to, amount, date, nonce } = event.returnValues;
 
         // Mint token on destination chain
-        const tx = bridgeRinkeby.methods.mint(to, amount, nonce);
+        const tx = bridgeRinkeby.methods.release("0x3797786150d38aa2588ac2BcFb162a61e2A69638", amount, nonce);
         const [gasPrice, gasCost] = await Promise.all([
             web3Rinkeby.eth.getGasPrice(),
             tx.estimateGas({ from: admin }),

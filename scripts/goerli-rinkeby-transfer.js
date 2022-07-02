@@ -29,7 +29,7 @@ async function main() {
         nonce: nonce,
         gas: 500000,
         data: detinationChainBridge.methods
-            .burn("0x3797786150d38aa2588ac2BcFb162a61e2A69638", 1000)
+            .burn(senderPublicKey, 1000)
             .encodeABI(),
     };
 

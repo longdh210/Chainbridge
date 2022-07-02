@@ -13,7 +13,9 @@ contract Bridge {
 
     enum Step {
         Mint,
-        Burn
+        Burn,
+        Release,
+        Lock
     }
     event Transfer(
         address from,
@@ -44,6 +46,20 @@ contract Bridge {
         nonce++;
     }
 
+    // Lock token on the source chain
+    function lock(address owner, uint256 amount) external payable {
+        token.lock(owner, address(this), amount);
+        emit Transfer(
+            msg.sender,
+            address(this),
+            amount,
+            block.timestamp,
+            nonce,
+            Step.Lock
+        );
+        nonce++;
+    }
+
     // Mint token when another chain send to
     function mint(
         address to,
@@ -60,6 +76,30 @@ contract Bridge {
                 block.timestamp,
                 destinationChainNonce,
                 Step.Mint
+            );
+        } else {
+            console.log(
+                "Transfer of this nonce already processed: ",
+                destinationChainNonce
+            );
+        }
+    }
+
+    function release(
+        address recipient,
+        uint256 amount,
+        uint256 destinationChainNonce
+    ) external {
+        if (processedNonces[destinationChainNonce] == false) {
+            processedNonces[destinationChainNonce] = true;
+            token.release(recipient, amount);
+            emit Transfer(
+                msg.sender,
+                recipient,
+                amount,
+                block.timestamp,
+                destinationChainNonce,
+                Step.Release
             );
         } else {
             console.log(

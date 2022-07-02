@@ -13,11 +13,6 @@ async function main() {
             "Source chain token deployed to:",
             sourceChainToken.address
         );
-        // Mint token
-        await sourceChainToken.mint(
-            "0x3797786150d38aa2588ac2BcFb162a61e2A69638",
-            100000
-        );
 
         // Deploy source chain bridge
         const SourceChainBridge = await hre.ethers.getContractFactory(
@@ -55,6 +50,25 @@ async function main() {
         console.log(
             "Destination chain bridge deployed to:",
             destinationChainbridge.address
+        );
+    }
+
+    if (hre.network.name == "localhost") {
+        // Deploy source chain token
+        const Token = await hre.ethers.getContractFactory("TokenERC20");
+        const token = await Token.deploy("Test", "T");
+        await token.deployed();
+        console.log("Source chain token deployed to:", token.address);
+
+        // Deploy source chain bridge
+        const SourceChainBridge = await hre.ethers.getContractFactory(
+            "SourceChainBridge"
+        );
+        const sourceChainBridge = await SourceChainBridge.deploy(token.address);
+        await sourceChainBridge.deployed();
+        console.log(
+            "Source chain bridge deployed to:",
+            sourceChainBridge.address
         );
     }
 }

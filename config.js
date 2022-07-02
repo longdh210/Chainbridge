@@ -1,11 +1,11 @@
 // All address
-const sourceChainTokenAddress = "0x7b17A93223Fe72C36aB442371F39711Af42Bd140";
-const sourceChainBridgeAddress = "0x596aAA61c56d909879d17698912BBF64377DAB96";
+const sourceChainTokenAddress = "0x60aE397A52b618B3e85AF10A43125eC83AdEe167";
+const sourceChainBridgeAddress = "0xB1dC542D81D611b627Df4a7b7D51e9b55a706543";
 
 const destinationChainTokenAddress =
-    "0x0D332633F13c82A17dcf2351DA7490a8C057D715";
+    "0x498d6867ed512170F715bffdF6306e108ad9C62e";
 const destinationChainBridgeAddress =
-    "0x803e931b9E730F4D11B60D9D161E135C124e9Dd9";
+    "0x37E99E397cc610d1e1A81ef63C869f719047E02D";
 
 const rinkebyPublicKey = "0x3797786150d38aa2588ac2BcFb162a61e2A69638";
 const rinkebyPrivateKey =
@@ -14,6 +14,9 @@ const rinkebyPrivateKey =
 const goerliPublicKey = "0x5B9aAEf5292B5D38C30Bb5B0CA65D3960E158b66";
 const goerliPrivateKey =
     "c46e661e1ad291ec3a06b459a13abec3202db1cba18c944b9762cca95e39418c";
+
+const localhostTokenAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+const localhostBridge = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 
 module.exports = {
     sourceChainTokenAddress,
@@ -24,4 +27,6 @@ module.exports = {
     rinkebyPrivateKey,
     goerliPublicKey,
     goerliPrivateKey,
+    localhostTokenAddress,
+    localhostBridge,
 };

@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ERC20Safe",
+  "sourceName": "contracts/Token/ERC20Safe.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212203e27c668df3371b088ac78da3fe2023f2b72061e24a1cc32299b5ab28877e63864736f6c63430008040033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212203e27c668df3371b088ac78da3fe2023f2b72061e24a1cc32299b5ab28877e63864736f6c63430008040033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
