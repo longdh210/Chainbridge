@@ -1,8 +1,8 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/longdh/Documents/Blockchain/Chainbridge/contracts/Bridge.sol": {
-      "lastModificationDate": 1656751608806,
+    "/Users/longdh/Documents/Project/Chainbridge/contracts/Bridge.sol": {
+      "lastModificationDate": 1657794769600,
       "contentHash": "2762339ef904428a5e03aed20e3bf4c7",
       "sourceName": "contracts/Bridge.sol",
       "solcConfig": {
@@ -40,8 +40,8 @@
         "Bridge"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1655710813678,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1657795322832,
       "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
@@ -75,8 +75,8 @@
         "IERC20"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/contracts/Interfaces/IToken.sol": {
-      "lastModificationDate": 1656525388707,
+    "/Users/longdh/Documents/Project/Chainbridge/contracts/Interfaces/IToken.sol": {
+      "lastModificationDate": 1657794769600,
       "contentHash": "0c1a7967903192a69d75c4fcef09154a",
       "sourceName": "contracts/Interfaces/IToken.sol",
       "solcConfig": {
@@ -110,8 +110,8 @@
         "IToken"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/hardhat/console.sol": {
-      "lastModificationDate": 1655710397221,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1657795323194,
       "contentHash": "cc4777addd464ea56fa35b1c45df0591",
       "sourceName": "hardhat/console.sol",
       "solcConfig": {
@@ -145,8 +145,8 @@
         "console"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/contracts/SourceChainBridge.sol": {
-      "lastModificationDate": 1656169914147,
+    "/Users/longdh/Documents/Project/Chainbridge/contracts/SourceChainBridge.sol": {
+      "lastModificationDate": 1657794769600,
       "contentHash": "a00eccb93bdeb5262b1b867c0aa6f46e",
       "sourceName": "contracts/SourceChainBridge.sol",
       "solcConfig": {
@@ -182,8 +182,8 @@
         "SourceChainBridge"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/contracts/DestinationChainBridge.sol": {
-      "lastModificationDate": 1656171230007,
+    "/Users/longdh/Documents/Project/Chainbridge/contracts/DestinationChainBridge.sol": {
+      "lastModificationDate": 1657794769600,
       "contentHash": "08f1f8224ac082f8e604a4fefe84a90b",
       "sourceName": "contracts/DestinationChainBridge.sol",
       "solcConfig": {
@@ -219,10 +219,10 @@
         "DestinationChainBridge"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1655710813679,
-      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+    "/Users/longdh/Documents/Project/Chainbridge/contracts/Token/ERC20.sol": {
+      "lastModificationDate": 1657794769601,
+      "contentHash": "2727f10e47461483ada93a3b37e5f908",
+      "sourceName": "contracts/Token/ERC20.sol",
       "solcConfig": {
         "version": "0.8.4",
         "settings": {
@@ -247,17 +247,18 @@
         }
       },
       "imports": [
-        "../IERC20.sol"
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "hardhat/console.sol"
       ],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.4"
       ],
       "artifacts": [
-        "IERC20Metadata"
+        "TokenERC20"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1655710813666,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1657795322649,
       "contentHash": "a9d2146925da52142435d3bb8df53c3c",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
@@ -295,8 +296,45 @@
         "ERC20"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1655710813363,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1657795322834,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1657795322522,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
@@ -330,8 +368,45 @@
         "Context"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol": {
-      "lastModificationDate": 1655710813666,
+    "/Users/longdh/Documents/Project/Chainbridge/contracts/Token/SourceChainToken.sol": {
+      "lastModificationDate": 1657794769601,
+      "contentHash": "bbcde51db568216ef1a59b295bfc902f",
+      "sourceName": "contracts/Token/SourceChainToken.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "SourceChainToken"
+      ]
+    },
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol": {
+      "lastModificationDate": 1657795322660,
       "contentHash": "ab4babe7912604097ae769a62fa08506",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol",
       "solcConfig": {
@@ -368,8 +443,8 @@
         "ERC20Pausable"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/security/Pausable.sol": {
-      "lastModificationDate": 1655710813691,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/security/Pausable.sol": {
+      "lastModificationDate": 1657795322904,
       "contentHash": "9c2dccab8e3a43a18c41e358763fe4d8",
       "sourceName": "@openzeppelin/contracts/security/Pausable.sol",
       "solcConfig": {
@@ -405,8 +480,8 @@
         "Pausable"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
-      "lastModificationDate": 1655710813346,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
+      "lastModificationDate": 1657795322410,
       "contentHash": "08101487003fda67e21e6d2cfe35bb2e",
       "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
       "solcConfig": {
@@ -445,8 +520,8 @@
         "AccessControl"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
-      "lastModificationDate": 1655710813674,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+      "lastModificationDate": 1657795322770,
       "contentHash": "57c84298234411cea19c7c284d86be8b",
       "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
       "solcConfig": {
@@ -480,8 +555,8 @@
         "IAccessControl"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1655710813696,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1657795322938,
       "contentHash": "9c54c6c065d9e590fdcdd72c451425b9",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
@@ -515,8 +590,8 @@
         "Strings"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1655710813664,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1657795322632,
       "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
       "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
@@ -552,8 +627,8 @@
         "ERC165"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1655710813677,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1657795322823,
       "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
       "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {
@@ -587,8 +662,8 @@
         "IERC165"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/access/IAccessControlEnumerable.sol": {
-      "lastModificationDate": 1655710813674,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/access/IAccessControlEnumerable.sol": {
+      "lastModificationDate": 1657795322784,
       "contentHash": "4e71cc90682e109e999ce2bd329f6572",
       "sourceName": "@openzeppelin/contracts/access/IAccessControlEnumerable.sol",
       "solcConfig": {
@@ -624,8 +699,8 @@
         "IAccessControlEnumerable"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/access/AccessControlEnumerable.sol": {
-      "lastModificationDate": 1655710813346,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/access/AccessControlEnumerable.sol": {
+      "lastModificationDate": 1657795322421,
       "contentHash": "b6d9b165dc57e9ad8153bdca05c783a4",
       "sourceName": "@openzeppelin/contracts/access/AccessControlEnumerable.sol",
       "solcConfig": {
@@ -663,8 +738,8 @@
         "AccessControlEnumerable"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
-      "lastModificationDate": 1655710813365,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+      "lastModificationDate": 1657795322599,
       "contentHash": "ee7890ed6993382898aeeed014cffab8",
       "sourceName": "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
       "solcConfig": {
@@ -698,8 +773,8 @@
         "EnumerableSet"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol": {
-      "lastModificationDate": 1655710813666,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol": {
+      "lastModificationDate": 1657795322668,
       "contentHash": "ca6cd8d752c4e75efa2a15734be0cb94",
       "sourceName": "@openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol",
       "solcConfig": {
@@ -739,8 +814,8 @@
         "ERC20PresetMinterPauser"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol": {
-      "lastModificationDate": 1655710813666,
+    "/Users/longdh/Documents/Project/Chainbridge/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol": {
+      "lastModificationDate": 1657795322651,
       "contentHash": "a1c7f80ae26f5b2d7d563475627fbf25",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol",
       "solcConfig": {
@@ -777,155 +852,8 @@
         "ERC20Burnable"
       ]
     },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/contracts/Token/ERC20.sol": {
-      "lastModificationDate": 1656752052992,
-      "contentHash": "2727f10e47461483ada93a3b37e5f908",
-      "sourceName": "contracts/Token/ERC20.sol",
-      "solcConfig": {
-        "version": "0.8.4",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "hardhat/console.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.4"
-      ],
-      "artifacts": [
-        "TokenERC20"
-      ]
-    },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/contracts/Token/SourceChainToken.sol": {
-      "lastModificationDate": 1656527923309,
-      "contentHash": "bbcde51db568216ef1a59b295bfc902f",
-      "sourceName": "contracts/Token/SourceChainToken.sol",
-      "solcConfig": {
-        "version": "0.8.4",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./ERC20.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.4"
-      ],
-      "artifacts": [
-        "SourceChainToken"
-      ]
-    },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/contracts/Token/DestinationChainToken.sol": {
-      "lastModificationDate": 1656527908810,
-      "contentHash": "640f51956af172f90741426c98ec5b27",
-      "sourceName": "contracts/Token/DestinationChainToken.sol",
-      "solcConfig": {
-        "version": "0.8.4",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./ERC20.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.4"
-      ],
-      "artifacts": [
-        "DestinationChainToken"
-      ]
-    },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/contracts/Migrations.sol": {
-      "lastModificationDate": 1656170361729,
-      "contentHash": "5d2c51c5318e4d0a247528fbd05440fa",
-      "sourceName": "contracts/Migrations.sol",
-      "solcConfig": {
-        "version": "0.8.4",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.4"
-      ],
-      "artifacts": [
-        "Migrations"
-      ]
-    },
-    "/Users/longdh/Documents/Blockchain/Chainbridge/contracts/Token/ERC20Safe.sol": {
-      "lastModificationDate": 1656688805754,
+    "/Users/longdh/Documents/Project/Chainbridge/contracts/Token/ERC20Safe.sol": {
+      "lastModificationDate": 1657794769601,
       "contentHash": "235d28daea7c434fe6a9bee61831d6fa",
       "sourceName": "contracts/Token/ERC20Safe.sol",
       "solcConfig": {
@@ -961,6 +889,78 @@
       ],
       "artifacts": [
         "ERC20Safe"
+      ]
+    },
+    "/Users/longdh/Documents/Project/Chainbridge/contracts/Token/DestinationChainToken.sol": {
+      "lastModificationDate": 1657794769601,
+      "contentHash": "640f51956af172f90741426c98ec5b27",
+      "sourceName": "contracts/Token/DestinationChainToken.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "DestinationChainToken"
+      ]
+    },
+    "/Users/longdh/Documents/Project/Chainbridge/contracts/Migrations.sol": {
+      "lastModificationDate": 1657794769600,
+      "contentHash": "5d2c51c5318e4d0a247528fbd05440fa",
+      "sourceName": "contracts/Migrations.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "Migrations"
       ]
     }
   }
